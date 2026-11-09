@@ -1,0 +1,89 @@
+/* Direction F — Aurora: light, colored aurora light, floating pill nav, soft cards. */
+[data-dir='f'] {
+  --max: 1240px;
+  --bg: #f7f8fc;
+  --bg-soft: #eef1f8;
+  --card: #ffffff;
+  --text: #101633;
+  --muted: #586180;
+  --gold: #b8893a;
+  --gold-ink: #8a6526;
+  --turq: #13877c;
+  --on-turq: #ffffff;
+  --on-gold: #ffffff;
+  --line: #e4e8f2;
+  --accent: #2b3fa0;
+  --link: #1b2a78;
+  --focus: #2b3fa0;
+  --radius-s: 14px;
+  --radius-m: 28px;
+  --radius-l: 36px;
+
+  --h1: clamp(2.6rem, 1.3rem + 5.4vw, 6rem);
+  --h1-weight: 900;
+  --h2: clamp(1.8rem, 1.2rem + 2.3vw, 3.0625rem);
+  --h2-weight: 800;
+  --h-final: clamp(2.1rem, 1.2rem + 3.6vw, 4.25rem);
+  --sec-pad: clamp(72px, 9vw, 128px);
+
+  --btn-bg: linear-gradient(135deg, #1b2a78, #0f1c4d);
+  --btn-bg-hover: linear-gradient(135deg, #2b3fa0, #13877c);
+  --btn-text: #ffffff;
+  --btn-radius: 999px;
+  --btn-shadow: 0 14px 30px -14px rgb(27 42 120 / 0.7);
+  --card-shadow-hover: 0 30px 60px -30px rgb(16 22 51 / 0.35);
+
+  --header-bg: rgb(255 255 255 / 0.72);
+  --header-text: #101633;
+  --header-muted: #3d4566;
+  --header-line: rgb(16 22 51 / 0.08);
+  --header-hover: rgb(16 22 51 / 0.05);
+  --emblem: #1b2a78;
+  --menu-bg: #ffffff;
+  --menu-text: #101633;
+
+  --hero-bg:
+    radial-gradient(45% 60% at 80% 15%, rgb(63 193 176 / 0.35), transparent 70%),
+    radial-gradient(40% 55% at 20% 30%, rgb(200 161 90 / 0.28), transparent 70%),
+    radial-gradient(55% 60% at 55% 95%, rgb(43 63 160 / 0.28), transparent 70%),
+    #f7f8fc;
+  --hero-text: #101633;
+  --hero-muted: #3d4566;
+  --hero-accent: #2b3fa0;
+  --hero-line-2: #1b2a78;
+  --hero-line-3: #13877c;
+  --hero-number: #101633;
+  --hero-rule: rgb(16 22 51 / 0.12);
+  --hero-veil: radial-gradient(55% 65% at 70% 45%, rgb(247 248 252 / 0.85), rgb(247 248 252 / 0.1) 80%);
+
+  --d-stroke: #c9d0e2;
+  --d-fill: rgb(255 255 255 / 0.8);
+  --dark-bg: #101633;
+  --dark-text: #ffffff;
+  --dark-muted: #c3c9de;
+  --dark-line: rgb(255 255 255 / 0.14);
+  --dark-link: #7fd8cc;
+  --dark-stroke: rgb(255 255 255 / 0.5);
+  --dark-fill: rgb(255 255 255 / 0.04);
+
+  --final-bg:
+    radial-gradient(50% 90% at 20% 100%, rgb(63 193 176 / 0.3), transparent 70%),
+    radial-gradient(50% 90% at 85% 0%, rgb(200 161 90 / 0.25), transparent 70%),
+    #eef1f8;
+  --final-text: #101633;
+  --footer-bg: #ffffff;
+  --footer-text: #101633;
+  --footer-muted: #586180;
+  --footer-head: #101633;
+  --footer-line: #e4e8f2;
+  --footer-input: #f7f8fc;
+}
+[data-dir='f'] .hero__canvas {
+  --hero-line: #8b96c9;
+  --hero-gold: #b8893a;
+  --hero-turquoise: #13877c;
+}
+[data-dir='f'] .sec[data-tone='dark'] {
+  --gold-ink: #e9cd8e;
+  --accent: #7fd8cc;
+}

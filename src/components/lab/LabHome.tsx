@@ -22,7 +22,7 @@ import { Ltr } from '@/components/ui/Ltr';
 import { HeroCanvasLoader } from './HeroCanvasLoader';
 import { LabMenu } from './LabMenu';
 
-export type Direction = 'a' | 'b' | 'c';
+export type Direction = 'a' | 'b' | 'c' | 'd' | 'e' | 'f';
 
 const NAV = ['about', 'services', 'spaces', 'events', 'join', 'contact'] as const;
 

@@ -1,0 +1,183 @@
+/* Direction D layout — bento grid, glass tiles, glows. */
+
+[data-dir='d'] .hero {
+  min-block-size: min(92vh, 900px);
+  display: grid;
+  align-content: center;
+  text-align: center;
+}
+[data-dir='d'] .hero__inner {
+  justify-items: center;
+}
+[data-dir='d'] .hero__title {
+  max-inline-size: none;
+}
+[data-dir='d'] .hero__line {
+  display: inline;
+}
+[data-dir='d'] .hero__line + .hero__line::before {
+  content: ' ';
+}
+[data-dir='d'] .hero__line--2,
+[data-dir='d'] .hero__line--3 {
+  background: linear-gradient(90deg, #46d3c1, #e3c27a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+[data-dir='d'] .hero__title {
+  max-inline-size: 13ch;
+  display: block;
+}
+[data-dir='d'] .hero__actions {
+  justify-content: center;
+}
+[data-dir='d'] .hero__eyebrow {
+  padding: 6px 14px;
+  border: 1px solid rgb(255 255 255 / 0.12);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.04);
+}
+
+/* Glance as glass tiles */
+[data-dir='d'] .glance {
+  border: 0;
+  gap: 12px;
+}
+[data-dir='d'] .glance__item,
+[data-dir='d'] .glance__item + .glance__item {
+  border: 1px solid rgb(255 255 255 / 0.09);
+  border-radius: 20px;
+  padding: 22px;
+  background: rgb(255 255 255 / 0.04);
+  backdrop-filter: blur(10px);
+  text-align: start;
+}
+@media (max-width: 640px) {
+  [data-dir='d'] .glance__item:nth-child(n + 3) {
+    border-block-start: 1px solid rgb(255 255 255 / 0.09);
+  }
+}
+
+/* Glass tiles everywhere */
+[data-dir='d'] .step,
+[data-dir='d'] .path,
+[data-dir='d'] .event,
+[data-dir='d'] .space,
+[data-dir='d'] .domain,
+[data-dir='d'] .network__list li {
+  background: rgb(255 255 255 / 0.04);
+  border: 1px solid rgb(255 255 255 / 0.08);
+  border-radius: var(--radius-m);
+  backdrop-filter: blur(12px);
+}
+[data-dir='d'] .sec__index {
+  inline-size: fit-content;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgb(70 211 193 / 0.12);
+  color: #46d3c1;
+}
+[data-dir='d'] .sec {
+  isolation: isolate;
+}
+[data-dir='d'] .sec::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset-block-start: 10%;
+  inset-inline-end: 5%;
+  inline-size: 40vw;
+  block-size: 40vw;
+  max-inline-size: 520px;
+  max-block-size: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(70 211 193 / 0.09), transparent 65%);
+  pointer-events: none;
+}
+
+/* Bento: work model — first step big */
+@media (min-width: 861px) {
+  [data-dir='d'] .steps {
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  [data-dir='d'] .step:first-child {
+    grid-row: span 2;
+    align-content: end;
+    background:
+      radial-gradient(80% 60% at 100% 0%, rgb(70 211 193 / 0.18), transparent 70%),
+      rgb(255 255 255 / 0.04);
+  }
+  [data-dir='d'] .step:first-child .step__title {
+    font-size: 2rem;
+  }
+}
+
+/* Bento: paths — organizations take a wide tile */
+@media (min-width: 1081px) {
+  [data-dir='d'] .paths {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  [data-dir='d'] .path--org {
+    grid-column: span 2;
+    grid-row: span 1;
+    background:
+      radial-gradient(70% 90% at 100% 0%, rgb(227 194 122 / 0.16), transparent 70%),
+      rgb(255 255 255 / 0.04);
+  }
+  [data-dir='d'] .path--org .path__title {
+    font-size: 1.75rem;
+  }
+}
+[data-dir='d'] .path:hover {
+  border-color: rgb(70 211 193 / 0.5);
+  box-shadow: 0 20px 60px -30px rgb(70 211 193 / 0.6);
+}
+
+/* Spaces and domains as tiles */
+[data-dir='d'] .spaces__list {
+  gap: 12px;
+}
+[data-dir='d'] .space,
+[data-dir='d'] .space:first-child {
+  padding: 22px 24px;
+  border-block: 1px solid rgb(255 255 255 / 0.08);
+}
+[data-dir='d'] .domains {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+[data-dir='d'] .domain {
+  padding: 22px;
+  border-block-end: 1px solid rgb(255 255 255 / 0.08);
+  flex-direction: column;
+  gap: 8px;
+}
+[data-dir='d'] .domain:hover {
+  border-color: rgb(70 211 193 / 0.5);
+}
+[data-dir='d'] .events {
+  border: 0;
+  gap: 12px;
+}
+[data-dir='d'] .event {
+  padding: 20px 24px;
+  border-block-end: 1px solid rgb(255 255 255 / 0.08);
+}
+[data-dir='d'] .event__date {
+  border: 0;
+  background: rgb(227 194 122 / 0.12);
+}
+[data-dir='d'] .contract {
+  border: 1px solid rgb(255 255 255 / 0.08);
+  border-radius: var(--radius-m);
+  padding: clamp(24px, 3vw, 40px);
+  background: rgb(255 255 255 / 0.03);
+}
+[data-dir='d'] .final__title {
+  background: linear-gradient(90deg, #eef0fa, #46d3c1 60%, #e3c27a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}

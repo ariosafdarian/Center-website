@@ -9,6 +9,12 @@ import '@/styles/lab/tokens-c.css';
 import '@/styles/lab/a.css';
 import '@/styles/lab/b.css';
 import '@/styles/lab/c.css';
+import '@/styles/lab/tokens-d.css';
+import '@/styles/lab/tokens-e.css';
+import '@/styles/lab/tokens-f.css';
+import '@/styles/lab/d.css';
+import '@/styles/lab/e.css';
+import '@/styles/lab/f.css';
 import { LabSwitcher } from '@/components/lab/LabSwitcher';
 
 /**
