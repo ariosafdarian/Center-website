@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 Bilingual site for «مرکز پیشرفت هوش مصنوعی و انقلاب ربات‌ها» — Next.js 16 (App Router, TypeScript strict) on Node.
-**docs/RFP.md is the source of truth.** Decisions on ambiguities: docs/decisions.md.
+**docs/RFP.md is the source of truth.** Decisions on ambiguities: docs/decisions.md. Audience journeys (input to stage 1): docs/journeys.md.
 
 ## Working rules (from the RFP)
 1. Work stage by stage: 0 foundation → 1 design exploration → 2 pages → 3 quality → 4 deployment. Finish each stage against its acceptance criteria in the RFP, report briefly, then **stop** for the owner’s gate.
