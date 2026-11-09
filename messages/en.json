@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "description": "The Center is the prime party accountable for AI and robotics projects in Iran. It connects, measures and guarantees, but does not implement.",
+    "titleTemplate": "{page} | Center for AI Advancement and the Robot Revolution"
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "mainNav": "Main navigation",
+    "footerNav": "Footer links",
+    "home": "Home"
+  },
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "spaces": "Spaces",
+    "events": "Events",
+    "join": "Work with us",
+    "contact": "Contact"
+  },
+  "lang": {
+    "switch": "فارسی",
+    "switchLabel": "View this page in Persian"
+  },
+  "header": {
+    "cta": "Submit a problem"
+  },
+  "footer": {
+    "contactTitle": "Contact",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Opening hours",
+    "socials": "Social media",
+    "pathsTitle": "Ways to work with us"
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "label": "Email",
+    "submit": "Subscribe",
+    "sending": "Sending…",
+    "ok": "You are subscribed to the newsletter.",
+    "privacy": "Your email is used only to send the newsletter."
+  },
+  "finalCta": {
+    "title": "We connect. We measure. We guarantee."
+  },
+  "pending": "This section’s text will be imported from the first prototype.",
+  "pages": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "spaces": "Spaces",
+    "events": "Events",
+    "join": "Work with us",
+    "contact": "Submit a request"
+  },
+  "home": {
+    "ctaPrimary": "Submit a problem",
+    "ctaSecondary": "Find your way to work with us",
+    "glanceTitle": "At a glance",
+    "glance": {
+      "activities": "activities",
+      "domains": "domains",
+      "spaces": "spaces",
+      "rings": "network rings"
+    },
+    "gapTitle": "The gap the Center closes",
+    "modelTitle": "How we work",
+    "contractTitle": "Employer, Center and implementer contracts",
+    "pathsTitle": "Four ways to work with us",
+    "spacesTitle": "Three spaces",
+    "servicesTitle": "Seven service domains",
+    "networkTitle": "The seven-ring network",
+    "eventsTitle": "Upcoming events",
+    "eventsAll": "All events",
+    "faqTitle": "Frequently asked questions"
+  },
+  "about": {
+    "what": "What the Center is",
+    "isNot": "What the Center is and is not",
+    "vision": "Vision",
+    "future": "Six pictures of the future",
+    "mission": "Mission and focus areas",
+    "values": "Values",
+    "network": "The seven-ring network",
+    "more": "More about the Center"
+  },
+  "services": {
+    "activities": "{count, plural, one {# activity} other {# activities}}"
+  },
+  "spaces": {
+    "diagram": "Nested arches",
+    "layer": "Layer {n}",
+    "access": "Access",
+    "components": "Components"
+  },
+  "events": {
+    "register": "Register for this event",
+    "empty": "No upcoming events are listed.",
+    "audiences": "For"
+  },
+  "join": {
+    "gains": "What you gain",
+    "process": "How the work proceeds"
+  },
+  "contact": {
+    "infoTitle": "Contact details",
+    "faqTitle": "Frequently asked questions"
+  },
+  "form": {
+    "pathLegend": "Choose your path",
+    "name": "Full name",
+    "phone": "Mobile phone",
+    "phoneHint": "For example +98 912 345 6789",
+    "email": "Email",
+    "org": "Organization or company",
+    "role": "Role",
+    "message": "Message",
+    "area": "Sector",
+    "size": "Organization size",
+    "field": "Field of expertise",
+    "link": "Portfolio or personal page",
+    "support": "Type of support",
+    "topic": "Topic",
+    "event": "Event",
+    "optional": "optional",
+    "choose": "Choose one",
+    "honeypot": "Leave this field empty",
+    "submit": "Send request",
+    "sending": "Sending…",
+    "privacy": "Your information is used only to answer this request.",
+    "eventMessage": "I would like to attend “{event}”.",
+    "successTitle": "Your request has been received",
+    "successId": "Request ID: {id}",
+    "successPhone": "If you have any questions, call:",
+    "again": "Send another request",
+    "errorSummary": "Some fields need your attention.",
+    "errors": {
+      "type": "Choose one of the paths.",
+      "name": {
+        "required": "Enter your name.",
+        "short": "Enter your full name, at least two letters."
+      },
+      "phone": {
+        "required": "Enter your mobile number, for example +98 912 345 6789.",
+        "phone": "Enter a complete mobile number, for example +98 912 345 6789."
+      },
+      "email": "Enter a valid email, for example name@example.com.",
+      "org": "Enter your organization’s name.",
+      "message": {
+        "required": "Write your message.",
+        "short": "Write a little more, at least ten characters."
+      },
+      "area": "Choose a sector.",
+      "size": "Choose a size from the list.",
+      "field": "Enter your field of expertise.",
+      "link": "Enter a valid link, for example example.com/me.",
+      "support": "Choose a type of support.",
+      "topic": "Choose a topic.",
+      "event": "Choose an event from the list.",
+      "generic": "Check this field.",
+      "rate": "You have sent too many requests this hour. Please try again in an hour.",
+      "origin": "This request came from an unknown address. Reload the page and send it again.",
+      "server": "Your request was not saved. Try again in a few minutes or call the Center.",
+      "network": "Could not connect. Check your internet connection and try again."
+    }
+  },
+  "result": {
+    "okTitle": "Your request has been received",
+    "newsletterOkTitle": "You are subscribed to the newsletter",
+    "errorTitle": "Your request was not saved",
+    "invalid": "Some fields were not filled in correctly. Go back to the form and send it again.",
+    "back": "Back to the form"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "Check the address or continue with one of these links.",
+    "home": "Home page",
+    "form": "Submit a request"
+  }
+}
