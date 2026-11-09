@@ -1,0 +1,74 @@
+/* Functional styles only (stage 0). Visual design comes from the stage 1 system. */
+
+.form {
+  display: grid;
+  gap: 1rem;
+  max-inline-size: 40rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  font: inherit;
+  inline-size: 100%;
+}
+
+/* Phone, email and link stay left-to-right but align with the page edge */
+.field input[dir='ltr'] {
+  text-align: start;
+}
+:global(html[dir='rtl']) .field input[dir='ltr'] {
+  text-align: end;
+}
+
+.card {
+  display: flex;
+  gap: 0.5rem;
+  align-items: start;
+  padding-block: 0.25rem;
+}
+.card label {
+  display: grid;
+}
+
+.error {
+  color: var(--color-error);
+  margin: 0;
+}
+.error:empty {
+  display: none;
+}
+
+.optional {
+  color: var(--color-muted);
+}
+
+/*
+ * Path-specific fields: hidden unless their path is checked. Pure CSS, so the
+ * no-JS form shows the right fields too.
+ */
+.field[data-for] {
+  display: none;
+}
+.form:has(input[name='type'][value='org']:checked) .field[data-for~='org'],
+.form:has(input[name='type'][value='talent']:checked) .field[data-for~='talent'],
+.form:has(input[name='type'][value='partner']:checked) .field[data-for~='partner'],
+.form:has(input[name='type'][value='sponsor']:checked) .field[data-for~='sponsor'],
+.form:has(input[name='type'][value='other']:checked) .field[data-for~='other'] {
+  display: grid;
+}
+
+/* "(optional)" next to the organization field disappears for org and partner */
+.form:has(input[name='type'][value='org']:checked) [data-unless~='org'],
+.form:has(input[name='type'][value='partner']:checked) [data-unless~='partner'] {
+  display: none;
+}
+
+.success h2:focus {
+  outline: none;
+}
