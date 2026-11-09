@@ -1,0 +1,20 @@
+/*
+ * Stage 0 placeholder tokens. The real palette, type scale and spacing are
+ * decided in stage 1 (design exploration) — see docs/RFP.md § "مسیر رسیدن به UI هدف".
+ * Brand family is fixed: lapis, gold, turquoise.
+ */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #0b1433;
+  --color-muted: #646e8c;
+  --color-gold: #b8893a;
+  --color-turquoise: #13877c;
+  --color-line: #e2e6ef;
+  --color-focus: #13877c;
+  --color-error: #b3261e;
+
+  --font-body-size: 1.0625rem; /* 17px — RFP minimum for Persian body text */
+  --line-height-fa: 1.9;
+  --line-height-en: 1.6;
+  --measure: 72ch;
+}

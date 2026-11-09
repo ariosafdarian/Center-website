@@ -1,0 +1,109 @@
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--font-body-size);
+  line-height: var(--line-height-en);
+  font-family: var(--font-en), system-ui, sans-serif;
+  overflow-wrap: anywhere;
+}
+
+html[lang='fa'] body {
+  font-family: var(--font-fa), Tahoma, sans-serif;
+  line-height: var(--line-height-fa);
+  /* Persian text never gets letter-spacing or uppercase */
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+/* English words inside Persian text keep the Latin face */
+:lang(en) {
+  font-family: var(--font-en), system-ui, sans-serif;
+}
+html[lang='fa'] :lang(en) {
+  font-family: var(--font-en), var(--font-fa), system-ui, sans-serif;
+}
+
+main,
+header,
+footer {
+  display: block;
+  padding-inline: 16px;
+  max-inline-size: 1280px;
+  margin-inline: auto;
+}
+
+img,
+svg {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+main:focus {
+  outline: none;
+}
+
+.skip-link {
+  position: absolute;
+  inset-inline-start: 8px;
+  inset-block-start: -100px;
+  padding: 8px 12px;
+  background: var(--color-text);
+  color: var(--color-bg);
+  z-index: 100;
+}
+.skip-link:focus {
+  inset-block-start: 8px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Honeypot: off-screen, not display:none (some bots skip hidden fields) */
+.hp {
+  position: absolute;
+  inset-inline-start: -10000px;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+}
+
+[dir='ltr'].ltr-inline,
+.ltr {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

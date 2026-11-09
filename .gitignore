@@ -1,0 +1,17 @@
+node_modules/
+.next/
+out/
+coverage/
+test-results/
+playwright-report/
+*.tsbuildinfo
+next-env.d.ts
+.DS_Store
+
+# runtime data (CSV backups, rate-limit state)
+data/
+
+# secrets
+.env
+.env.*
+!.env.example

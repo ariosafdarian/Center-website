@@ -1,0 +1,42 @@
+{
+  "name": "center-site",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "prebuild": "tsx scripts/check-content.ts --build",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next typegen && eslint . && tsc --noEmit",
+    "lint:fa": "tsx scripts/lint-fa.ts",
+    "test": "vitest run",
+    "e2e": "playwright test",
+    "shots": "tsx scripts/shots.ts",
+    "check:bot": "tsx --conditions=react-server scripts/check-bot.ts",
+    "check:content": "tsx scripts/check-content.ts",
+    "import:v1": "tsx scripts/import-v1.ts"
+  },
+  "dependencies": {
+    "next": "^16.4.5",
+    "next-intl": "^4.14.9",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "server-only": "^0.0.1",
+    "undici": "^8.12.4",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.5",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "vitest": "^5.1.0"
+  }
+}
