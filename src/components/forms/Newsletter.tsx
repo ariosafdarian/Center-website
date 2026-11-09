@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import { validateNewsletter } from '@/lib/validate';
+import { clean, isEmail, LIMITS } from '@/lib/normalize';
 import { useHydrated } from '@/lib/use-hydrated';
 
 type State = { kind: 'idle' } | { kind: 'sending' } | { kind: 'ok' } | { kind: 'error'; message: string };
@@ -21,8 +21,8 @@ export function Newsletter() {
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const v = validateNewsletter({ email });
-    if (!v.ok) {
+    const value = clean(email, LIMITS.email);
+    if (!isEmail(value)) {
       setState({ kind: 'error', message: t('form.errors.email') });
       return;
     }
@@ -32,7 +32,7 @@ export function Newsletter() {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
         body: JSON.stringify({
-          email: v.data.email,
+          email: value,
           lang: locale,
           website: hp,
           el: Math.round((Date.now() - shownAt.current) / 1000),

@@ -27,10 +27,15 @@ async function main() {
   fs.mkdirSync(out, { recursive: true });
   const browser = await chromium.launch(fs.existsSync(SYSTEM_CHROMIUM) ? { executablePath: SYSTEM_CHROMIUM } : {});
   for (const vp of VIEWPORTS) {
-    const ctx = await browser.newContext({ viewport: { width: vp.width, height: vp.height }, deviceScaleFactor: 1 });
+    // Reduced motion: scroll-driven reveals would leave off-screen sections blank in a full-page capture.
+    const ctx = await browser.newContext({ viewport: { width: vp.width, height: vp.height }, deviceScaleFactor: 1, reducedMotion: 'reduce' });
     const page = await ctx.newPage();
     for (const p of pages) {
       await page.goto(new URL(p, base).toString(), { waitUntil: 'networkidle' });
+      // Lab chrome stays out of review screenshots; give the hero canvas time to draw.
+      await page.addStyleTag({ content: '[data-lab-switcher]{display:none!important}' });
+      await page.waitForSelector('canvas[data-ready]', { timeout: 4000 }).catch(() => {});
+      await page.waitForTimeout(1200);
       const slug = p.replace(/^\//, '').replace(/[/?&=]+/g, '_') || 'home';
       const file = path.join(out, `${slug}--${vp.name}.png`);
       await page.screenshot({ path: file, fullPage: true });

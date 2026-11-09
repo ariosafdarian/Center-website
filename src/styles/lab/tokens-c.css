@@ -1,0 +1,82 @@
+/* Direction C — Hybrid: warm light body, lapis hero and footer with the knot motif. */
+[data-dir='c'] {
+  --max: 1240px;
+  --bg: #faf7f0;
+  --bg-soft: #f3eee2;
+  --card: #ffffff;
+  --text: #0b1433;
+  --muted: #555f7d;
+  --gold: #b8893a;
+  --gold-ink: #87631f;
+  --turq: #13877c;
+  --on-turq: #ffffff;
+  --on-gold: #070d24;
+  --line: #e6dfcf;
+  --accent: #87631f;
+  --link: #0f1c4d;
+  --focus: #13877c;
+  --radius-s: 10px;
+  --radius-m: 16px;
+  --radius-l: 26px;
+
+  --h1: clamp(2.6rem, 1.3rem + 5.2vw, 5.75rem);
+  --h1-weight: 900;
+  --h2: clamp(1.8rem, 1.2rem + 2.3vw, 3.0625rem);
+  --h2-weight: 800;
+  --h-final: clamp(2.1rem, 1.2rem + 3.6vw, 4.25rem);
+  --sec-pad: clamp(76px, 10vw, 136px);
+
+  --btn-bg: #c8a15a;
+  --btn-bg-hover: #d8b36c;
+  --btn-text: #070d24;
+  --btn-radius: 999px;
+
+  --header-bg: rgb(250 247 240 / 0.86);
+  --header-text: #0b1433;
+  --header-muted: #3f4866;
+  --header-line: #e6dfcf;
+  --header-hover: #f3eee2;
+  --emblem: #0f1c4d;
+  --menu-bg: #0f1c4d;
+  --menu-text: #f1e8d6;
+
+  --hero-bg: linear-gradient(160deg, #0f1c4d 0%, #0a1438 55%, #070d24 100%);
+  --hero-text: #f1e8d6;
+  --hero-muted: #c3c9de;
+  --hero-accent: #e9cd8e;
+  --hero-line-2: #e9cd8e;
+  --hero-line-3: #3fc1b0;
+  --hero-number: #e9cd8e;
+  --hero-rule: rgb(233 205 142 / 0.28);
+
+  --d-stroke: #cfc4a9;
+  --d-fill: rgb(255 255 255 / 0.7);
+  --dark-bg: #0f1c4d;
+  --dark-text: #f1e8d6;
+  --dark-muted: #b4bcd6;
+  --dark-line: rgb(233 205 142 / 0.25);
+  --dark-link: #e9cd8e;
+  --dark-stroke: rgb(233 205 142 / 0.6);
+  --dark-fill: rgb(7 13 36 / 0.35);
+
+  --final-bg: #f3eee2;
+  --final-text: #0b1433;
+  --footer-bg: #070d24;
+  --footer-text: #e6dcc6;
+  --footer-muted: #98a2c0;
+  --footer-head: #e9cd8e;
+  --footer-line: rgb(200 161 90 / 0.3);
+  --footer-input: rgb(15 28 77 / 0.6);
+  --emblem-footer: #e9cd8e;
+}
+[data-dir='c'] .hero__canvas {
+  --hero-line: #c8a15a;
+  --hero-gold: #e9cd8e;
+  --hero-turquoise: #3fc1b0;
+}
+[data-dir='c'] .sec[data-tone='dark'],
+[data-dir='c'] .site-footer {
+  --gold-ink: #e9cd8e;
+  --gold: #c8a15a;
+  --accent: #e9cd8e;
+}

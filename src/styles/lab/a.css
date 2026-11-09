@@ -1,0 +1,89 @@
+/* Direction A layout — ceremonial, centered, ogee frames, pyrite flecks. */
+
+/* Pyrite: very faint gold flecks on lapis (dark areas only) */
+[data-dir='a'] .hero::before,
+[data-dir='a'] .final::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgb(233 205 142 / 0.35) 0.7px, transparent 1.2px),
+    radial-gradient(rgb(233 205 142 / 0.2) 0.6px, transparent 1px);
+  background-size:
+    37px 41px,
+    23px 29px;
+  background-position:
+    0 0,
+    11px 17px;
+  mask-image: radial-gradient(70% 60% at 50% 40%, #000, transparent);
+}
+[dir='rtl'] [data-dir='a'] .hero__veil {
+  background: linear-gradient(to left, rgb(7 13 36 / 0.92) 25%, rgb(7 13 36 / 0.5) 60%, transparent 90%);
+}
+[data-dir='a'] .hero {
+  min-block-size: min(92vh, 900px);
+  display: grid;
+  align-content: end;
+}
+[data-dir='a'] .hero__title {
+  text-shadow: 0 2px 30px rgb(7 13 36 / 0.6);
+}
+
+[data-dir='a'] .sec__head {
+  justify-items: center;
+  text-align: center;
+}
+[data-dir='a'] .sec__title {
+  max-inline-size: 22ch;
+}
+[data-dir='a'] .sec__index {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+[data-dir='a'] .sec__index::before,
+[data-dir='a'] .sec__index::after {
+  content: '';
+  inline-size: 48px;
+  block-size: 1px;
+  background: var(--line);
+}
+[data-dir='a'] .sec + .sec::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 50%;
+  inline-size: 1px;
+  block-size: 56px;
+  background: linear-gradient(var(--gold), transparent);
+}
+
+/* Paths: ogee-framed portals */
+[data-dir='a'] .arch-frame {
+  display: block;
+}
+[data-dir='a'] .path {
+  text-align: center;
+  justify-items: center;
+  padding-block-start: clamp(64px, 7vw, 92px);
+  border-start-start-radius: 50% 120px;
+  border-start-end-radius: 50% 120px;
+  background: linear-gradient(180deg, rgb(15 28 77 / 0.75), rgb(7 13 36 / 0.4));
+}
+[data-dir='a'] .path:hover .arch-frame path {
+  opacity: 1;
+}
+[data-dir='a'] .step {
+  background: linear-gradient(180deg, rgb(15 28 77 / 0.6), rgb(15 28 77 / 0.15));
+}
+[data-dir='a'] .gap__list {
+  font-size: 1.25rem;
+}
+[data-dir='a'] .domains .domain__num::after {
+  content: '';
+}
+[data-dir='a'] .final__title {
+  color: #e9cd8e;
+}

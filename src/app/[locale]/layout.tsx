@@ -5,8 +5,6 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { routing, dirOf } from '@/i18n/routing';
 import { initLocale } from '@/lib/page';
 import { vazirmatn, inter } from '../fonts';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -38,11 +36,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
           <a className="skip-link" href="#main">
             {t('skip')}
           </a>
-          <Header locale={locale} />
-          <main id="main" tabIndex={-1}>
-            {children}
-          </main>
-          <Footer locale={locale} />
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>

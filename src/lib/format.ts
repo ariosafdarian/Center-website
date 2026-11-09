@@ -90,3 +90,17 @@ export function formatEventDateAlt(iso: string, locale: string): string {
   }
   return new Intl.DateTimeFormat('en-GB-u-ca-persian', { timeZone: TZ, day: 'numeric', month: 'long', year: 'numeric' }).format(d);
 }
+
+/** Parts for a date block: day number, month name, weekday, time — in the page language and calendar. */
+export function eventDateParts(iso: string, locale: string) {
+  const d = new Date(iso);
+  const loc = locale === 'fa' ? 'fa-IR-u-ca-persian' : 'en-GB';
+  const p = (opts: Intl.DateTimeFormatOptions) => new Intl.DateTimeFormat(loc, { timeZone: TZ, ...opts }).format(d);
+  return {
+    day: p({ day: 'numeric' }),
+    month: p({ month: 'long' }),
+    year: p({ year: 'numeric' }),
+    weekday: p({ weekday: 'long' }),
+    time: p({ hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }),
+  };
+}

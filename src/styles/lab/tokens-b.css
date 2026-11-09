@@ -1,0 +1,86 @@
+/* Direction B — Institutional and light (Amii page structure). Dark hero, white body. */
+[data-dir='b'] {
+  --max: 1280px;
+  --bg: #ffffff;
+  --bg-soft: #f4f5f9;
+  --card: #ffffff;
+  --text: #0b1433;
+  --muted: #5a6482;
+  --gold: #b8893a;
+  --gold-ink: #8a6526;
+  --gold-soft: #f6eedc;
+  --turq: #13877c;
+  --turq-soft: #e3f4f1;
+  --on-turq: #ffffff;
+  --on-gold: #ffffff;
+  --line: #e2e6ef;
+  --accent: #13877c;
+  --link: #0b1433;
+  --focus: #13877c;
+  --radius-s: 6px;
+  --radius-m: 10px;
+  --radius-l: 16px;
+
+  --h1: clamp(2.5rem, 1.3rem + 5vw, 5.5rem);
+  --h1-weight: 800;
+  --h2: clamp(1.75rem, 1.2rem + 2.2vw, 3rem);
+  --h2-weight: 800;
+  --h-final: clamp(2rem, 1.2rem + 3.4vw, 4rem);
+  --sec-pad: clamp(72px, 9vw, 128px);
+
+  --btn-bg: #0b1433;
+  --btn-bg-hover: #13877c;
+  --btn-text: #ffffff;
+  --btn-radius: 8px;
+
+  --header-bg: rgb(255 255 255 / 0.86);
+  --header-text: #0b1433;
+  --header-muted: #3f4866;
+  --header-line: #e2e6ef;
+  --header-hover: #f4f5f9;
+  --emblem: #0f1c4d;
+  --menu-bg: #ffffff;
+  --menu-text: #0b1433;
+
+  --hero-bg: #0b1433;
+  --hero-text: #ffffff;
+  --hero-muted: #c3c9de;
+  --hero-accent: #7fd8cc;
+  --hero-line-2: #ffffff;
+  --hero-line-3: #7fd8cc;
+  --hero-number: #ffffff;
+  --hero-rule: rgb(255 255 255 / 0.18);
+
+  --d-stroke: #c9cfdd;
+  --d-fill: rgb(244 245 249 / 0.7);
+  --dark-bg: #0b1433;
+  --dark-text: #ffffff;
+  --dark-muted: #c3c9de;
+  --dark-line: rgb(255 255 255 / 0.16);
+  --dark-link: #7fd8cc;
+  --dark-stroke: rgb(255 255 255 / 0.5);
+  --dark-fill: rgb(255 255 255 / 0.04);
+
+  --final-bg: #f4f5f9;
+  --final-text: #0b1433;
+  --footer-bg: #0b1433;
+  --footer-text: #e8ebf3;
+  --footer-muted: #a3aecd;
+  --footer-head: #ffffff;
+  --footer-line: rgb(255 255 255 / 0.2);
+  --footer-input: rgb(255 255 255 / 0.06);
+}
+[data-dir='b'] .hero__canvas {
+  --hero-line: #3b4a80;
+  --hero-gold: #b8893a;
+  --hero-turquoise: #3fc1b0;
+}
+[data-dir='b'] .sec[data-tone='dark'] {
+  --gold-ink: #e9cd8e;
+  --accent: #7fd8cc;
+}
+[data-dir='b'] .site-footer {
+  --gold-ink: #e9cd8e;
+  --gold: #e9cd8e;
+  --on-gold: #0b1433;
+}

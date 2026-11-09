@@ -3,7 +3,7 @@
 Bilingual (Persian/English) website of «مرکز پیشرفت هوش مصنوعی و انقلاب ربات‌ها», Niavaran, Tehran.
 Next.js 16 on Node. Specification: [docs/RFP.md](docs/RFP.md) · decisions: [docs/decisions.md](docs/decisions.md) · working rules: [CLAUDE.md](CLAUDE.md).
 
-**Status: stage 0 (foundation).** Unstyled skeleton pages; the request and newsletter forms work end to end.
+**Status: stage 1 (design exploration), round 1.** Three home-page directions at `/lab/a`, `/lab/b`, `/lab/c` (run with `LAB_ENABLED=true`). Site pages are still the unstyled stage 0 skeleton; forms work end to end.
 
 ## Quick start
 
