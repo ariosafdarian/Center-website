@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { initLocale } from '@/lib/page';
+import '@/styles/palette.css';
 import '@/styles/lab/base.css';
 import '@/styles/lab/tokens-a.css';
 import '@/styles/lab/tokens-b.css';
@@ -15,6 +16,8 @@ import '@/styles/lab/tokens-f.css';
 import '@/styles/lab/d.css';
 import '@/styles/lab/e.css';
 import '@/styles/lab/f.css';
+import '@/styles/lab/tokens-g.css';
+import '@/styles/lab/g.css';
 import { LabSwitcher } from '@/components/lab/LabSwitcher';
 
 /**

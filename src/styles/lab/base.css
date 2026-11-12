@@ -1126,4 +1126,27 @@ svg.diagram {
   .gap__list {
     display: none;
   }
+  .site-footer__newsletter form {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ticker (domains strip) — hidden unless a direction styles it */
+.ticker {
+  display: none;
+}
+
+/* Halo so diagram labels stay readable where they cross a line */
+.d-label,
+.d-core-label {
+  paint-order: stroke;
+  stroke: var(--d-halo, var(--bg));
+  stroke-width: 6px;
+  stroke-linejoin: round;
+}
+.sec[data-tone='soft'] {
+  --d-halo: var(--bg-soft);
+}
+.sec[data-tone='dark'] {
+  --d-halo: var(--dark-bg);
 }

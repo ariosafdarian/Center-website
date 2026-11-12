@@ -17,7 +17,8 @@
     "shots": "tsx scripts/shots.ts",
     "check:bot": "tsx --conditions=react-server scripts/check-bot.ts",
     "check:content": "tsx scripts/check-content.ts",
-    "import:v1": "tsx scripts/import-v1.ts"
+    "import:v1": "tsx scripts/import-v1.ts",
+    "palette": "tsx scripts/palette.ts"
   },
   "dependencies": {
     "next": "^16.4.5",

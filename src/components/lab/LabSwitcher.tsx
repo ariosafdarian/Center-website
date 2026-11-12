@@ -8,9 +8,9 @@ export function LabSwitcher() {
   return (
     <nav className="lab-switcher" aria-label="جهت‌های طراحی" data-lab-switcher>
       <NextLink href="/lab">آزمایشگاه</NextLink>
-      {(['a', 'b', 'c', 'd', 'e', 'f'] as const).map((d) => (
+      {(['a', 'b', 'c', 'd', 'e', 'f', 'g'] as const).map((d) => (
         <NextLink key={d} href={`/lab/${d}`} aria-current={path?.endsWith(`/lab/${d}`) ? 'page' : undefined}>
-          {{ a: 'الف', b: 'ب', c: 'ج', d: 'د', e: 'ه', f: 'و' }[d]}
+          {{ a: 'الف', b: 'ب', c: 'ج', d: 'د', e: 'ه', f: 'و', g: 'ز' }[d]}
         </NextLink>
       ))}
     </nav>

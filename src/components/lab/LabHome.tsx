@@ -22,7 +22,7 @@ import { Ltr } from '@/components/ui/Ltr';
 import { HeroCanvasLoader } from './HeroCanvasLoader';
 import { LabMenu } from './LabMenu';
 
-export type Direction = 'a' | 'b' | 'c' | 'd' | 'e' | 'f';
+export type Direction = 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g';
 
 const NAV = ['about', 'services', 'spaces', 'events', 'join', 'contact'] as const;
 
@@ -165,6 +165,22 @@ export async function LabHome({ dir, locale }: { dir: Direction; locale: Locale 
             </dl>
           </div>
         </section>
+
+        {/* ───────── Ticker: the seven service domains (real content; no fake logo wall) ───────── */}
+        <div className="ticker" aria-hidden="true">
+          <div className="ticker__track">
+            {[0, 1].map((rep) => (
+              <span key={rep} className="ticker__group">
+                {activities.data.domains.map((d) => (
+                  <span key={d.key} className="ticker__item">
+                    {d.title[locale]}
+                    <Star size={9} />
+                  </span>
+                ))}
+              </span>
+            ))}
+          </div>
+        </div>
 
         {/* ───────── Gap ───────── */}
         <Sec id="gap" index={1} title={t('home.gapTitle')} locale={locale}>

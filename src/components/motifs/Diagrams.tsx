@@ -31,7 +31,7 @@ export function GapDiagram({ groups, core, locale }: { groups: { key: string; ti
           <circle key={i} cx={x} cy={y} r={R} className="d-ring" />
         ))}
         <polygon points={pointsAttr(khatamPoints(C[0], C[1], 40))} className="d-core" />
-        <text x={C[0]} y={C[1] + 76} className="d-core-label" textAnchor="middle" dominantBaseline="central">
+        <text x={C[0]} y={C[1] - 70} className="d-core-label" textAnchor="middle" dominantBaseline="central">
           {core[locale]}
         </text>
         {order.map((gi, i) => {
